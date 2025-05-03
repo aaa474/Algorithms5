@@ -7,16 +7,14 @@ There are $n$ children forming a circle. The $i$-th child currently has $a_i$ ap
 In one move, we can take one apple from a child and give it to an \emph{adjacent} child. What is the minimum number of moves we have to make to make every child have exactly $\bar a$ apples? Model this problem by a flow network with costs, and therefore show that this problem can be solved in polynomial time.
 
 \paragraph{\textcolor{brown}{Solution.}}
-Using flow networks, let's create a directed graph where each child i is a vertex. We connect each child to neighboring children in a circle being i - 1 mod and i + 1 mod.
+Using flow networks, let's create $a$ directed graph where each child i is $a$ vertex. We connect each child to neighboring children in $a$ circle being i - 1 mod and i + 1 mod.
 
 Three cases for supply/demand: 
-    If a_i < a then i has demand a - a_i
-    If a_i > a then i has supply a_i - a
-    If neutral then a = a_i
+    If $a_i$ < $a$ then i has demand $a$ - $a_i$
+    If $a_i$ > $a$ then i has supply $a_i$ - $a$
+    If neutral then $a$ = $a_i$
 
-This should give a $O(n)$ run-time as it is based on similar cost problems where the capacities and costs are bounded by polynomials.
-
-
+This should give $a$ $O(n)$ run-time as it is based on similar cost problems where the capacities and costs are bounded by polynomials.
 
 \section*{Problem 2}
 Explicitly construct a bijection between each of the following pairs of sets and therefore show that they have the same cardinality.
@@ -32,23 +30,23 @@ Explicitly construct a bijection between each of the following pairs of sets and
 \begin{enumerate}
     \item Define f : N -> {n^2 | n in the set N} as f(n) = n^2
             The function is injective because f(n1) = f(n2) would mean that n1^2 = n2^2 and that means n1 = n2 which is in the set of N
-            The function is surjective because for any perfect sqauare m^2, there exists a natural number m such that f(m) = m^2
-            This is a bijection
+            The function is surjective because for any perfect sqauare m^2, there exists $a$ natural number m such that f(m) = m^2
+            This is $a$ bijection
     \item   Define f : (0,1) -> (1, +infinity) as f(x) = 1/x
             The function is injective as if f(x1) = f(x2) then 1/x1 = 1/x2 implies x1 = x2
             The function is surjective as y is in the set of (1, +infinity) there exists x = 1/y in the set of (0,1) such that f(x) = y 
-            This is a bijection
+            This is $a$ bijection
     \item   Define f : (-1,1) -> R as f(x) = x/1-|x|
             The function is injective as if f(x1) = f(x2) then x1/1-|x1| = x2/1 - |x2| which implies x1 = x2
             The function is surjective as for any y in the set of R there exists x = y/1 + |y| in the set (-1,1) such that f(x) = y
-            This is a bijection
+            This is $a$ bijection
     \item   Define f : [0,1) as:
                 f(x) = x if x doesn't equal 1/2^n for any n in the set of N
                 f(1/2^n) = 1/2^n + 1 for n in the set of N
                 f(0) = 0
                 The function is injective as each element in [0,1) is mapped to by most one element
                 The function is surjective because every element in [0,1) is mapped by some element
-                This is a bijection
+                This is $a$ bijection
 \end{enumerate}
 
 
@@ -57,9 +55,9 @@ Explicitly construct a bijection between each of the following pairs of sets and
 Review the halting problem, and prove that the following problem is also undecidable: Given a Turing machine, decide whether it always correctly decides the set cover problem. (Note that the given Turing machine may not halt on a valid input, in which case it does not correctly decide the set cover problem.)
 
 \paragraph{\textcolor{brown}{Solution.}}
-Define M as a Turning machine and make x an input. M' will be if the function M(x) halts.
-M' will on input S run M(x) and if M(x) halts, then we run a brute force algorithm to continue or return the result given. If M(x) does not halt, then M' won't either
-If the cover was deciable, then it would lead to a contradiction as a Turing machine with A that solves it and H(M') results in M(x) not flowing
+Define M as $a$ Turning machine and make x an input. M' will be if the function M(x) halts.
+M' will on input $S$ run M(x) and if M(x) halts, then we run $a$ brute force algorithm to continue or return the result given. If M(x) does not halt, then M' won't either
+If the cover was deciable, then it would lead to $a$ contradiction as $a$ Turing machine with A that solves it and H(M') results in M(x) not flowing
 
 The halting problem would be impossible in that case
 
@@ -70,9 +68,9 @@ Prove that the following problem is $\mathtt{NP}$-complete: Given $n$ positive i
 
 \paragraph{\textcolor{brown}{Solution.}}
 This partition problem is NP because the polynomial time of both parts' sum is equal to $W$ and it can be done in O(n) time.
-Let T be the target, and let's create a partition problem set S' of n + 2 integers S' = S U {2T, sum x in the set S x}
-The sum of the elements in \(S^{\prime }\) is 2 sum x + 2T, and W = T.
-Since the subset from b1 to bn equals T, T is a valid partition, and conversly
+Let $T$ be the target, and let's create $a$ partition problem set $S$' of n + 2 integers $S$' = $S$ U {2T, sum x in the set $S$ x}
+The sum of the elements in \($S$^{\prime }\) is 2 sum x + 2T, and W = $T$.
+Since the subset from b1 to bn equals $T$, $T$ is $a$ valid partition, and conversly
 
 This reduction is in polynomial time
 
@@ -83,7 +81,7 @@ This reduction is in polynomial time
 Prove that the following problem is $\mathtt{NP}$-complete: Given a weighted directed graph with $n$ vertices and $m$ edges, decide whether the graph has a simple cycle with sum of weights equal to $344$. The weight of each edge must be an integer, but can be positive, negative, or zero.
 
 \paragraph{\textcolor{brown}{Solution.}}
-Let's create a set of verticies from v1 to vn and set T = 344. For each i to n, we add an edge from vi-1 -> vi that has a weight of 0
-We also add an edge from vi-1 -> vi with a weight of mi, which is the sum
+Let's create $a$ set of verticies from v1 to vn and set $T$ = $344$. For each i to n, we add an edge from vi-1 -> vi that has $a$ weight of 0
+We also add an edge from vi-1 -> vi with $a$ weight of mi, which is the sum
 The total weight of this cycle that is created will be the sum of all mi
 This would be in polynomial time
